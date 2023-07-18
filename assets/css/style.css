@@ -44,6 +44,7 @@ h5,
 h6 {
   font-weight: 500;
   color: white;
+  line-height: 1.2;
 }
 a {
   text-decoration: none;
@@ -94,6 +95,9 @@ ul {
   color: #fff;
   text-align: center;
   font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 .left-sidebar h2:last-child {
   margin-bottom: 30px;
@@ -213,14 +217,118 @@ ul {
   visibility: visible;
   opacity: 1;
 }
+.banner {
+  padding: 68px 0;
+  position: relative;
+  overflow: hidden;
+}
+.container-wrapper {
+  max-width: 1130px;
+  padding: 0 15px;
+  margin: auto;
+}
+.container {
+  max-width: 770px;
+  width: 100%;
+  margin-left: auto;
+}
+.banner .container {
+  position: relative;
+  z-index: 3;
+}
+.section-head h4 {
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  border: 1px solid #565656;
+  padding: 9px 20px;
+  border-radius: 30px;
+  margin-bottom: 53px;
+  display: inline-flex;
+  align-items: center;
+}
+.section-head h4 i {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.section-head {
+  color: white;
+}
+.section-head h1 {
+  font-size: 78px;
+  letter-spacing: -0.2px;
+  line-height: 90px;
+  margin-bottom: 43px;
+  font-weight: 300;
+}
+.section-head h1 span {
+  color: var(--primary-red);
+}
+.banner .container p {
+  max-width: 480px;
+  margin-bottom: 31px;
+}
+.banner .container a {
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid #575757;
+  position: relative;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.banner .container a img {
+  display: block;
+  animation: rotating 6s infinite linear;
+}
+.banner .container a i {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  display: block;
+}
+.banner .why-me {
+  display: flex;
+  gap: 100px;
+  margin-top: 55px;
+}
+.banner .why-me h3 {
+  font-size: 72px;
+  color: var(--primary-red);
+  line-height: 56px;
+  margin-bottom: 38px;
+  letter-spacing: -0.2px;
+  font-weight: 300;
+}
+.banner .why-me p {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
 /* Classes Css End */
 
+/* key frames start */
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* key frames end */
 /* media max-width 2000px Query Start*/
 @media (max-width: 2000px) {
   .left-sidebar {
     max-width: 400px;
   }
-  .left-sidebar .sidebar-header {
+  .left-sidebar .sidebar-heading {
     margin-bottom: 30px;
   }
   .left-sidebar .copyright {
@@ -243,6 +351,7 @@ ul {
     max-width: 250px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 46px;
   }
   .left-sidebar {
     max-width: 350px;
