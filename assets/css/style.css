@@ -54,6 +54,10 @@ a {
 ul {
   list-style-type: none;
 }
+section:not(#home) {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
 /* Tags Css End */
 
 /* Classes Css Start  */
@@ -217,7 +221,7 @@ ul {
   visibility: visible;
   opacity: 1;
 }
-.banner {
+#home {
   padding: 68px 0;
   position: relative;
   overflow: hidden;
@@ -232,7 +236,7 @@ ul {
   width: 100%;
   margin-left: auto;
 }
-.banner .container {
+#home .container {
   position: relative;
   z-index: 3;
 }
@@ -263,14 +267,15 @@ ul {
   margin-bottom: 43px;
   font-weight: 300;
 }
-.section-head h1 span {
+.section-head h1 span,
+.section-head h2 span {
   color: var(--primary-red);
 }
-.banner .container p {
+#home .container p {
   max-width: 480px;
   margin-bottom: 31px;
 }
-.banner .container a {
+#home .container a {
   width: 175px;
   height: 175px;
   display: flex;
@@ -283,22 +288,22 @@ ul {
   overflow: hidden;
   margin-right: 15px;
 }
-.banner .container a img {
+#home .container a img {
   display: block;
   animation: rotating 6s infinite linear;
 }
-.banner .container a i {
+#home .container a i {
   position: absolute;
   color: white;
   font-size: 30px;
   display: block;
 }
-.banner .why-me {
+#home .why-me {
   display: flex;
   gap: 100px;
   margin-top: 55px;
 }
-.banner .why-me h3 {
+#home .why-me h3 {
   font-size: 72px;
   color: var(--primary-red);
   line-height: 56px;
@@ -306,10 +311,130 @@ ul {
   letter-spacing: -0.2px;
   font-weight: 300;
 }
-.banner .why-me p {
+#home .why-me p {
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
+}
+.section-head h2 {
+  font-size: 48px;
+  line-height: 60px;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 33px;
+}
+#about .container p {
+  line-height: 30px;
+  max-width: 610px;
+}
+.resume-timeline .timeline-block {
+  position: relative;
+  padding-left: 74px;
+  padding-bottom: 60px;
+}
+.resume-timeline .timeline-block::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #656565;
+  border-radius: 50%;
+  left: -6px;
+  top: 7px;
+  transition: 0.3s;
+}
+.resume-timeline .timeline-block::after {
+  content: "";
+  background: #333333;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: -1;
+}
+.resume-timeline .timeline-block:hover .date {
+  color: var(--primary-red);
+}
+.resume-timeline .timeline-block .date {
+  display: block;
+  margin-bottom: 28px;
+  transition: 0.3s;
+}
+.resume-timeline .timeline-block h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 3px;
+  color: white;
+}
+.resume-timeline .timeline-block p:not(.date) {
+  font-size: 13px;
+  color: #999999;
+  margin-bottom: 18px;
+}
+.service-stack .service-item {
+  border: 1px solid #565656;
+  border-radius: 20px;
+  transition: 0.3s;
+  position: relative;
+  padding: 44px 48px 41px 48px;
+  margin-bottom: 10px;
+}
+.service-stack .service-item:hover {
+  border-color: var(--primary-red);
+}
+.service-stack .service-item i {
+  position: absolute;
+  font-size: 30px;
+  color: var(--primary-red);
+  top: 45px;
+  right: 50px;
+}
+.service-stack .service-item h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.service-stack .service-item p {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+.service-stack .service-item .project {
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.service-stack .service-item:hover .project {
+  text-decoration: underline;
+}
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills-row .skill-col {
+  width: 25%;
+  max-width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-bottom: 50px;
+}
+.skills-row .skill-col .skill {
+  border: 2px solid #565656;
+  border-radius: 10px;
+  padding: 54px 0 48px 0;
+  transition: 0.3s;
+  text-align: center;
+  min-height: 100%;
+}
+.skills-row .skill-col .skill:hover {
+  border-color: var(--primary-red);
+}
+.skills-row .skill-col .skill img {
+  display: block;
+  margin: auto auto 29px auto;
 }
 /* Classes Css End */
 
@@ -366,3 +491,12 @@ ul {
 }
 
 /* media max-width 1200px Query End*/
+
+/* media max-width 768px Query Start*/
+
+@media (min-width: 768px) {
+  .skills-row .skill-col {
+    flex: 0 0 auto;
+  }
+}
+/* media max-width 768px Query End*/
