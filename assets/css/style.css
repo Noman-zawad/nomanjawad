@@ -58,6 +58,54 @@ section:not(#home) {
   padding-top: 90px;
   padding-bottom: 90px;
 }
+ul {
+  list-style-type: none;
+}
+label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2px;
+}
+label sup {
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+  color: #fc4545;
+  font-size: 12px;
+  top: 0;
+}
+input,
+select,
+textarea {
+  display: block;
+  color: white;
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 18px;
+  padding: 0;
+  transition: 0.2s;
+  padding-bottom: 3px;
+  margin: 0;
+  line-height: 2;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #555555;
+}
 /* Tags Css End */
 
 /* Classes Css Start  */
@@ -112,7 +160,7 @@ section:not(#home) {
   margin-bottom: 45px;
   padding: 0 !important;
 }
-.left-sidebar .social-profile {
+.social-profile {
   gap: 8px;
   margin-bottom: 118px;
   display: flex;
@@ -120,7 +168,7 @@ section:not(#home) {
   flex-wrap: wrap;
   justify-content: center;
 }
-.left-sidebar .social-profile li a {
+.social-profile li a {
   display: block;
   width: 50px;
   height: 50px;
@@ -410,18 +458,22 @@ section:not(#home) {
 .service-stack .service-item:hover .project {
   text-decoration: underline;
 }
-.skills-row {
+.row {
   display: flex;
   flex-wrap: wrap;
 }
-.skills-row .skill-col {
-  width: 25%;
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.row .col-24 {
   max-width: 100%;
   padding-right: 12px;
   padding-left: 12px;
   margin-bottom: 50px;
 }
-.skills-row .skill-col .skill {
+.skill {
   border: 2px solid #565656;
   border-radius: 10px;
   padding: 54px 0 48px 0;
@@ -429,12 +481,198 @@ section:not(#home) {
   text-align: center;
   min-height: 100%;
 }
-.skills-row .skill-col .skill:hover {
+.skill:hover {
   border-color: var(--primary-red);
 }
-.skills-row .skill-col .skill img {
+.skill img {
   display: block;
   margin: auto auto 29px auto;
+}
+.portfolio-item {
+  margin-bottom: 62px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.portfolio-item .portfolio-img {
+  height: 410px;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.portfolio-item .portfolio-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio-item .catagories {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  bottom: 20px;
+  left: 20px;
+}
+.portfolio-item .catagories li a {
+  display: block;
+  font-size: 14px;
+  background: white;
+  color: black;
+  padding: 7px 20px;
+  border-radius: 19px;
+  transition: 0.3s;
+}
+.portfolio-item:hover .catagories li a {
+  background-color: #1f1f1f;
+  color: white;
+}
+.portfolio-item h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+.portfolio-item h3 a {
+  color: white;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+.portfolio-item:hover h3 a {
+  border-color: white;
+}
+#contact .container h3 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+#contact .container #required {
+  color: #fc4545;
+  font-size: 14px;
+  margin-bottom: 31px;
+  display: none;
+}
+.input-group {
+  margin-bottom: 34px;
+  width: 100%;
+}
+.menu {
+  position: absolute;
+  right: 68px;
+  top: 60px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #1f1f1f;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #575757;
+}
+.menu:hover {
+  border-color: var(--primary-red);
+}
+.menu:hover i {
+  color: var(--primary-red);
+}
+.menu i {
+  color: white;
+  font-size: 21px;
+  transition: 0.3s;
+}
+.responsive-sidebar-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.responsive-sidebar-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+.responsive-sidebar-menu .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #565656;
+  opacity: 0.5;
+}
+.responsive-sidebar-menu.active .sidebar {
+  margin-right: 0;
+}
+.responsive-sidebar-menu .sidebar {
+  max-width: 345px;
+  width: 100%;
+  margin-left: auto;
+  background: #191919;
+  height: 100%;
+  overflow-x: hidden;
+  padding-top: 50px;
+  margin-left: 250px;
+  transition: 0.3s;
+}
+.responsive-sidebar-menu .sidebar .menu-wrap,
+.responsive-sidebar-menu .sidebar .sidebar-social {
+  width: 46%;
+  margin: auto;
+}
+.responsive-sidebar-menu .sidebar p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu {
+  position: relative;
+  right: auto;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+  background: none;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 30px;
+}
+.responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu li a i {
+  margin-bottom: 2px;
+}
+.responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu li a.active span {
+  color: white;
+}
+.responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu li a span {
+  position: relative;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  color: #999999;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+.responsive-sidebar-menu .sidebar .sidebar-social .social-profile {
+  gap: 15px;
+}
+.responsive-sidebar-menu .sidebar .sidebar-social .social-profile li a {
+  color: #999999;
+  transition: 0.3s;
+  font-size: 16px;
 }
 /* Classes Css End */
 
@@ -485,18 +723,48 @@ section:not(#home) {
 }
 /* media max-width 1555px Query End*/
 
-/* media max-width 1200px Query Start*/
+/* media max-width 1220px Query Start*/
 
-@media (min-width: 1200px) {
+@media (max-width: 1220px) {
+  .left-sidebar {
+    position: relative;
+    max-width: 767px;
+    left: 0;
+    margin: auto;
+    top: 0;
+    transform: translateY(0);
+    margin-top: 20px;
+  }
+  .container-wrapper {
+    max-width: 767px;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .vertical-menu {
+    display: none;
+  }
+  .menu {
+    position: fixed;
+  }
 }
 
-/* media max-width 1200px Query End*/
+/* media max-width 1220px Query End*/
 
 /* media max-width 768px Query Start*/
 
 @media (min-width: 768px) {
-  .skills-row .skill-col {
+  .col-24 {
     flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-100 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .col-50 {
+    flex: 0 0 auto;
+    width: 50%;
   }
 }
 /* media max-width 768px Query End*/

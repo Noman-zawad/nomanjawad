@@ -12,6 +12,75 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div class="menu">
+      <i class="fa-solid fa-grip-lines"></i>
+    </div>
+    <div class="responsive-sidebar-menu">
+      <div class="overlay"></div>
+      <div class="sidebar">
+        <div class="menu-wrap">
+          <p>Menu</p>
+          <ul class="vertical-menu">
+            <li>
+              <a href="#home" class="active">
+                <span>Home</span>
+                <i class="fa-solid fa-house"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="">
+                <span>About</span>
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#resume" class="">
+                <span>Resume</span>
+                <i class="fa-sharp fa-solid fa-briefcase"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="">
+                <span>Services</span>
+                <i class="fa-solid fa-bars-staggered"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#skills" class="">
+                <span>Skill</span>
+                <i class="fa-solid fa-shapes"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio" class="">
+                <span>Protfolio</span>
+                <i class="fa-solid fa-grip-vertical"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#content" class="">
+                <span>Content</span>
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-social">
+          <p>Social</p>
+          <ul class="social-profile">
+            <li>
+              <a href=""><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-github"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="left-sidebar">
       <div class="sidebar-heading">
         <img
@@ -82,12 +151,6 @@
         <a href="#portfolio" class="">
           <span>Protfolio</span>
           <i class="fa-solid fa-grip-vertical"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#testimonial" class="">
-          <span>Testimonial</span>
-          <i class="fa-solid fa-message"></i>
         </a>
       </li>
       <li>
@@ -173,7 +236,7 @@
         </div>
       </div>
     </section>
-    <section id="servics">
+    <section id="services">
       <div class="container-wrapper">
         <div class="container">
           <div class="section-head">
@@ -212,44 +275,225 @@
             <h4><i class="fa-solid fa-shapes"></i>Skills</h4>
             <h2>My <span>Advantages</span></h2>
           </div>
-          <div class="skills-row">
-            <div class="skill-col">
+          <div class="row">
+            <div class="col-24">
               <div class="skill">
                 <img src="./assets/images/figma.png" alt="Figma" />
                 <h4>Figma</h4>
               </div>
             </div>
-            <div class="skill-col">
+            <div class="col-24">
               <div class="skill">
                 <img src="./assets/images/framer.png" alt="Farmer" />
                 <h4>Farmer</h4>
               </div>
             </div>
-            <div class="skill-col">
+            <div class="col-24">
               <div class="skill">
                 <img src="./assets/images/webflow.png" alt="Webflow" />
                 <h4>Webflow</h4>
               </div>
             </div>
-            <div class="skill-col">
+            <div class="col-24">
               <div class="skill">
                 <img src="./assets/images/react.png" alt="React" />
                 <h4>React</h4>
               </div>
             </div>
-            <div class="skill-col">
+            <div class="col-24">
               <div class="skill">
                 <img src="./assets/images/wordpress.png" alt="WordPress" />
                 <h4>WordPress</h4>
               </div>
             </div>
-            <div class="skill-col">
+            <div class="col-24">
               <div class="skill">
                 <img src="./assets/images/laravel.png" alt="Laravel" />
                 <h4>Laravel</h4>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="container-wrapper">
+        <div class="container">
+          <div class="section-head">
+            <h4><i class="fa-solid fa-grip-vertical"></i>PORTFOLIO</h4>
+            <h2>Featured <span>Projects</span></h2>
+          </div>
+          <div class="row">
+            <div class="col-100">
+              <div class="portfolio-item">
+                <div class="portfolio-img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/portfolio1.jpeg"
+                      alt="portfolio"
+                    />
+                  </a>
+                  <ul class="catagories">
+                    <li><a href="#">Figma</a></li>
+                    <li><a href="#">WordPress</a></li>
+                  </ul>
+                </div>
+                <h3><a href="#">Bureau - Architecture Studio Website</a></h3>
+              </div>
+            </div>
+            <div class="col-50">
+              <div class="portfolio-item">
+                <div class="portfolio-img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/portfolio2.jpeg"
+                      alt="Portfolio"
+                    />
+                  </a>
+                  <ul class="catagories">
+                    <li><a href="#">WordPress</a></li>
+                    <li><a href="#">Laravel/PHP</a></li>
+                  </ul>
+                </div>
+                <h3><a href="#">Moonex WordPress Theme</a></h3>
+              </div>
+            </div>
+            <div class="col-50">
+              <div class="portfolio-item">
+                <div class="portfolio-img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/portfolio3.jpeg"
+                      alt="Portfolio"
+                    />
+                  </a>
+                  <ul class="catagories">
+                    <li><a href="#">WordPress</a></li>
+                    <li><a href="#">Laravel/PHP</a></li>
+                  </ul>
+                </div>
+                <h3><a href="#">Taskly Dashboard</a></h3>
+              </div>
+            </div>
+            <div class="col-100">
+              <div class="portfolio-item">
+                <div class="portfolio-img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/portfolio4.jpeg"
+                      alt="portfolio"
+                    />
+                  </a>
+                  <ul class="catagories">
+                    <li><a href="#">Figma</a></li>
+                    <li><a href="#">React</a></li>
+                  </ul>
+                </div>
+                <h3><a href="#">Hinterland - Real Estate Site Redesign</a></h3>
+              </div>
+            </div>
+            <div class="col-100">
+              <div class="portfolio-item">
+                <div class="portfolio-img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/portfolio5.jpeg"
+                      alt="portfolio"
+                    />
+                  </a>
+                  <ul class="catagories">
+                    <li><a href="#">Farmer</a></li>
+                  </ul>
+                </div>
+                <h3><a href="#">Lewis Portfolio Framer Template</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container-wrapper">
+        <div class="container">
+          <div class="section-head">
+            <h4><i class="fa-solid fa-envelope"></i>CONTACT</h4>
+            <h2>Let's Work <span>Together!</span></h2>
+          </div>
+          <h3><a href="#">nomanzawad@gmail.com</a></h3>
+          <p id="required">* Marked fields are required to fill</p>
+          <form action="">
+            <div class="row">
+              <div class="col-50">
+                <div class="input-group">
+                  <label for="full-name">Full Name <sup>*</sup></label>
+                  <input size="40" type="text" placeholder="Your Full Name" />
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="input-group">
+                  <label for="email">Email <sup>*</sup></label>
+                  <input
+                    size="40"
+                    type="email"
+                    name=""
+                    id=""
+                    placeholder="Your email address"
+                  />
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="input-group">
+                  <label for="phone">Phone (optional)</label>
+                  <input
+                    size="40"
+                    type="number"
+                    placeholder="Your phone number"
+                  />
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="input-group">
+                  <label for="email">Subject <sup>*</sup></label>
+                  <select name="subject" id="">
+                    <option value="subject-1">Subject 1</option>
+                    <option value="subject-2">Subject 2</option>
+                    <option value="subject-3">Subject 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-100">
+                <div class="input-group">
+                  <label for="badget">YOUR BUDGET (OPTIONAL)</label>
+                  <input
+                    size="40"
+                    type="number"
+                    name=""
+                    id=""
+                    placeholder="Budget for your project"
+                  />
+                </div>
+              </div>
+              <div class="col-100">
+                <div class="input-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="40"
+                    rows="2"
+                    placeholder="Write your message here ..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-100">
+                <div class="input-group">
+                  <button class="btn" type="submit" name="submit">
+                    send message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
