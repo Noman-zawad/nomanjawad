@@ -616,7 +616,7 @@ textarea:focus {
 .responsive-sidebar-menu .sidebar {
   max-width: 345px;
   width: 100%;
-  margin-left: auto;
+  margin-left: auto !important;
   background: #191919;
   height: 100%;
   overflow-x: hidden;
@@ -646,6 +646,8 @@ textarea:focus {
 }
 .responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu li a {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
   align-items: center;
   gap: 10px;
 }
@@ -666,13 +668,31 @@ textarea:focus {
   padding: 0;
   border-radius: 0;
 }
+.responsive-sidebar-menu
+  .sidebar
+  .menu-wrap
+  .vertical-menu
+  li
+  a:hover
+  span::before {
+  opacity: 0;
+  visibility: hidden;
+}
 .responsive-sidebar-menu .sidebar .sidebar-social .social-profile {
-  gap: 15px;
+  gap: 30px;
+  margin-bottom: 0;
+  justify-content: start;
 }
 .responsive-sidebar-menu .sidebar .sidebar-social .social-profile li a {
   color: #999999;
   transition: 0.3s;
   font-size: 16px;
+  border: none;
+  width: auto;
+  height: auto;
+}
+.responsive-sidebar-menu .sidebar .sidebar-social .social-profile li a:hover {
+  color: var(--primary-red);
 }
 /* Classes Css End */
 
@@ -733,7 +753,7 @@ textarea:focus {
     margin: auto;
     top: 0;
     transform: translateY(0);
-    margin-top: 20px;
+    margin-top: 100px;
   }
   .container-wrapper {
     max-width: 767px;
@@ -747,11 +767,14 @@ textarea:focus {
   .menu {
     position: fixed;
   }
+  .responsive-sidebar-menu .sidebar .menu-wrap .vertical-menu {
+    display: flex;
+  }
 }
 
 /* media max-width 1220px Query End*/
 
-/* media max-width 768px Query Start*/
+/* media min-width 768px Query Start*/
 
 @media (min-width: 768px) {
   .col-24 {
@@ -767,4 +790,17 @@ textarea:focus {
     width: 50%;
   }
 }
-/* media max-width 768px Query End*/
+/* media min-width 768px Query End*/
+
+/* media min-width 768px Query Start*/
+
+@media (max-width: 768px) {
+  .menu {
+    right: 30px;
+    top: 30px;
+  }
+  .section-head h1 {
+    font-size: 58px;
+  }
+}
+/* media min-width 768px Query End*/
